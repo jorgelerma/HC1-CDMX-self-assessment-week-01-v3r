@@ -10,10 +10,11 @@ var Tree = function(value){
 
 
   var newNode = {};
-  var children = [];
-  _.extend(newNode,newObj);
   newNode.value = value;
 
+  _.extend(newNode,newObj);
+
+  newNode.children = [];
 
 
 
@@ -28,14 +29,22 @@ newObj.addChild = function(value){
   var childs = new Tree(value);
   //this.children.push(childs);
   //childs.children.push();
-  this.children.push();
+  console.log("adds");
+  this.children.push(childs);
 
+}
+
+newObj.map = function(){
+
+
+  console.log("maps");
 }
 
 var myTree = new Tree('rootx');
 
 myTree.addChild('Johns');
 console.log(myTree);
+myTree.map();
 
 /**
   *
