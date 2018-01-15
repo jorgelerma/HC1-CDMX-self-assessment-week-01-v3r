@@ -34,7 +34,22 @@ newObj.addChild = function(value){
 
 }
 
-newObj.map = function(){
+newObj.map = function(mapper){
+
+  // I will go thru every node of the tree
+
+  mapper(new Tree(this.value));
+
+  
+
+  for(var k=0; k<this.children.length; k++){
+
+    var childz = this.chilren[k];
+    mapper(childz.value);
+  }
+
+  // willl pass value of current node to create new tree/node
+
 
 
   console.log("maps");
