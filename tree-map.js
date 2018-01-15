@@ -40,19 +40,19 @@ newObj.map = function(mapper){
 
   mapper(new Tree(this.value));
 
-  
 
+  // willl pass value of current node to create new tree/node
   for(var k=0; k<this.children.length; k++){
 
     var childz = this.chilren[k];
     mapper(childz.value);
   }
 
-  // willl pass value of current node to create new tree/node
 
 
 
-  console.log("maps");
+  return;
+  //console.log("maps");
 }
 
 var myTree = new Tree('rootx');
