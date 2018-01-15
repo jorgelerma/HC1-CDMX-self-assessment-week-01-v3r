@@ -5,6 +5,32 @@
 Available resources for this prompt
 MDN
 */
+var _ = require('underscore');
+var Tree = function(value){
+
+
+  var newNode = {};
+
+  newNode.value = value;
+
+  _.extend(newNode,newObj);
+
+  var children = [];
+
+
+}
+
+var newObj = {};
+
+newObj.addChild = function(value){
+
+  var childs = new Tree(value);
+
+}
+
+var myTree = new Tree('root');
+
+//myTree.addChild('Johns');
 
 /**
   *
